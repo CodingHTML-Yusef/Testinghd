@@ -51,7 +51,8 @@
   cursor: pointer;
   font-size: 4vh;
   margin-left: 5vh;
-  margin: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .navbar>a {
