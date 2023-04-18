@@ -25,11 +25,11 @@ function setCloak(name) {
     if (cloaks[name]) {
         document.title = cloaks[name].title;
 
-        const favicon = document.querySelector('link[type="image/x-icon"]') || document.createElement('link');
+        const favicon = document.querySelector('link[rel="shortcut icon"]') || document.createElement('link');
         favicon.href = cloaks[name].icon;
+        favicon.rel = 'shortcut icon';
 
-        if (document.querySelector('link[type="image/x-icon"]')) {
-            favicon.type = 'link[type="image/x-icon"]';
+        if (!document.querySelector('link[rel="shortcut icon"]')) {
             document.head.appendChild(favicon);
         }
 
@@ -38,6 +38,7 @@ function setCloak(name) {
         alert(`${name} is not a valid cloak`);
     }
 }
+
 
 function resetCloak() {
     localStorage.setItem('cloak', 'default');
