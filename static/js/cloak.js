@@ -1,19 +1,19 @@
 const cloaks = {
     'google': {
-        icon: 'https://www.google.com/s2/favicons?domain=https://google.com&sz=50',
+        icon: '/assets/cloaks/Google.ico',
         title: 'Google'
     },
     'canvas': {
-        icon: 'https://www.google.com/s2/favicons?domain=https://canvas.instructure.com&sz=50',
+        icon: '/assets/cloaks/Canvas.ico',
         title: 'Dashboard'
     },
     'drive': {
-        icon: 'https://www.google.com/s2/favicons?domain=https://drive.google.com&sz=50',
+        icon: '/assets/cloaks/Drive.ico',
         title: 'My Drive - Google Drive'
     },
     'gmail': {
-        icon: 'https://www.google.com/s2/favicons?domain=https://mail.google.com&sz=50',
-        title: 'Inbox (1) - school@is.stupid - School is Stupid Mail'
+        icon: '/assets/cloaks/Gmail.ico',
+        title: 'Inbox (1)'
     },
     'default': {
         icon: '/favicon.ico',
@@ -25,11 +25,11 @@ function setCloak(name) {
     if (cloaks[name]) {
         document.title = cloaks[name].title;
 
-        const favicon = document.querySelector('link[type="image/x-icon"]') || document.createElement('link');
+        const favicon = document.querySelector('link[rel="icon"]') || document.createElement('link');
         favicon.href = cloaks[name].icon;
+        favicon.rel = 'icon';
 
-        if (document.querySelector('link[type="image/x-icon"]')) {
-            favicon.type = 'link[type="image/x-icon"]';
+        if (!document.querySelector('link[rel="icon"]')) {
             document.head.appendChild(favicon);
         }
 
@@ -38,6 +38,7 @@ function setCloak(name) {
         alert(`${name} is not a valid cloak`);
     }
 }
+
 
 function resetCloak() {
     localStorage.setItem('cloak', 'default');
