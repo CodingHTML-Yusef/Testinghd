@@ -25,11 +25,11 @@ function setCloak(name) {
     if (cloaks[name]) {
         document.title = cloaks[name].title;
 
-        const favicon = document.querySelector('link[rel="shortcut icon"]') || document.createElement('link');
+        const favicon = document.querySelector('link[rel="icon"]') || document.createElement('link');
         favicon.href = cloaks[name].icon;
-        favicon.rel = 'shortcut icon';
+        favicon.rel = 'icon';
 
-        if (!document.querySelector('link[rel="shortcut icon"]')) {
+        if (!document.querySelector('link[rel="icon"]')) {
             document.head.appendChild(favicon);
         }
 
