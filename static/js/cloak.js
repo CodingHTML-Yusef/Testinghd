@@ -1,19 +1,19 @@
 const cloaks = {
     'google': {
-        icon: 'https://www.google.com/s2/favicons?domain=https://google.com&sz=50',
+        icon: '/static/assets/cloaks/Google.ico',
         title: 'Google'
     },
     'canvas': {
-        icon: 'https://www.google.com/s2/favicons?domain=https://canvas.instructure.com&sz=50',
+        icon: '/static/assets/cloaks/Canvas.ico',
         title: 'Dashboard'
     },
     'drive': {
-        icon: 'https://www.google.com/s2/favicons?domain=https://drive.google.com&sz=50',
+        icon: '/static/assets/cloaks/Drive.ico',
         title: 'My Drive - Google Drive'
     },
     'gmail': {
-        icon: 'https://www.google.com/s2/favicons?domain=https://mail.google.com&sz=50',
-        title: 'Inbox (1) - school@is.stupid - School is Stupid Mail'
+        icon: '/static/assets/cloaks/Gmail.ico',
+        title: 'Inbox (1)'
     },
     'default': {
         icon: '/favicon.ico',
