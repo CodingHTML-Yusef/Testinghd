@@ -1,18 +1,18 @@
 const cloaks = {
     'google': {
-        icon: '/static/assets/cloaks/Google.ico',
+        icon: '/assets/cloaks/Google.ico',
         title: 'Google'
     },
     'canvas': {
-        icon: '/static/assets/cloaks/Canvas.ico',
+        icon: '/assets/cloaks/Canvas.ico',
         title: 'Dashboard'
     },
     'drive': {
-        icon: '/static/assets/cloaks/Drive.ico',
+        icon: '/assets/cloaks/Drive.ico',
         title: 'My Drive - Google Drive'
     },
     'gmail': {
-        icon: '/static/assets/cloaks/Gmail.ico',
+        icon: '/assets/cloaks/Gmail.ico',
         title: 'Inbox (1)'
     },
     'default': {
