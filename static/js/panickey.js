@@ -8,12 +8,6 @@ function setPanicKey() {
     // Get the value of the input box
     var inputValue = inputBox.value;
     
-    // Check if the panickey localstorage item already exists
-    if (!localStorage.getItem("panickey")) {
-      // Set the panickey localstorage item to your default value
-      localStorage.setItem("panickey", "`");
-    }
-    
     // Set the panickey localstorage item with the input value as the value
     localStorage.setItem("panickey", inputValue);
   });
@@ -37,3 +31,9 @@ function checkPanicKey() {
 // Call the setPanicKey and checkPanicKey functions to set up the event listeners
 setPanicKey();
 checkPanicKey();
+
+// Check if the panickey localstorage item already exists
+    if (!localStorage.getItem("panickey")) {
+      // Set the panickey localstorage item to your default value
+      localStorage.setItem("panickey", "`");
+}
