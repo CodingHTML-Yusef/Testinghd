@@ -58,7 +58,7 @@ hr.rounded {
   background-color: rgba(0,0,0,0.95);
   color: white;
   width: 8vh;
-  height: 4vh;
+  height: 2vh;
   transition: background-color 0.3s ease-in-out;
 }
 
