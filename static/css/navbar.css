@@ -45,6 +45,7 @@
   position: absolute;
   display: flex;
   right: 5vh;
+  font-size: 3vh;
 }
 
 .title {
