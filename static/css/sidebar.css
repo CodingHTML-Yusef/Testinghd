@@ -46,3 +46,22 @@ hr.rounded {
   margin-top: 2vh;
   margin-bottom: 2vh;
 }
+
+.panicinput {
+  font-family: Lato;
+  text-align: center;
+  font-size: 1.8vh;
+  box-shadow: 0.5vh 0.5vh 1vh 0vh rgba(0,0,0,0.75);
+  border: none;
+  border-radius: 2vh;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.95);
+  color: white;
+  width: 8vh;
+  height: 4vh;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.panicinput:hover {
+  background-color: rgba(8,8,8,0.95);
+}
