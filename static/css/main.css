@@ -79,7 +79,7 @@ input::placeholder {
 }
 
 .mainpage-box {
-    background: rgba(0, 0, 0, 0.80);
+    background: rgba(0, 0, 0, 0.85);
     border-radius: 2vh;
     margin: auto;
     width: 30vh;
@@ -208,7 +208,7 @@ input::placeholder {
         transform: translate(-50%, -50%) rotate(0deg);
     }
 
-    120% {
+    100% {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
@@ -222,7 +222,7 @@ input::placeholder {
         backdrop-filter: blur(2vh) brightness(15%);
     }
 
-    120% {
+    100% {
         backdrop-filter: blur(5vh) brightness(20%);
     }
 }
