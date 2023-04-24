@@ -16,6 +16,9 @@
       transition: opacity 0.25s ease-in-out;
     }
   </style>
+</head>
+
+<body data-theme="">
   <script>
     const spinner = document.getElementById('spinner-container');
 spinner.innerHTML = '<div class="spinner"></div>';
@@ -47,9 +50,6 @@ fetch('/assets/JSON/games.json')
         console.error(error);
     });
   </script>
-</head>
-
-<body data-theme="">
   <div id="background">
     <div id="loadnav"></div>
     <script src="/js/all.js"></script>
