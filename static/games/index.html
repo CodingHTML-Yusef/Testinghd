@@ -19,6 +19,16 @@
 </head>
 
 <body data-theme="">
+  <div id="background">
+    <div id="loadnav"></div>
+    <script src="/js/all.js"></script>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/sidebar.js"></script>
+    <div class="cardcontainer" id="card-container">
+      <div id="spinner-container"></div>
+      <div id="cards-container"></div>
+    </div>
+  </div>
   <script>
     const spinner = document.getElementById('spinner-container');
 spinner.innerHTML = '<div class="spinner"></div>';
@@ -50,16 +60,6 @@ fetch('/assets/JSON/games.json')
         console.error(error);
     });
   </script>
-  <div id="background">
-    <div id="loadnav"></div>
-    <script src="/js/all.js"></script>
-    <script src="/js/navbar.js"></script>
-    <script src="/js/sidebar.js"></script>
-    <div class="cardcontainer" id="card-container">
-      <div id="spinner-container"></div>
-      <div id="cards-container"></div>
-    </div>
-  </div>
   <!--<script src="/js/games.js"></script>-->
   <script>
     const tiltEffectSettings = {
