@@ -10,11 +10,11 @@
 * {
     font-family: Montserrat;
     user-select: none;
+    cursor: none;
 }
 
 body {
     opacity: 0.5;
-    cursor: none
 }
 
 a {
