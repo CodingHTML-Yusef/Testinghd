@@ -31,52 +31,48 @@
     </div>
   </div>
   <script>
-    const spinner = document.getElementById('spinner-container');
+    const tiltEffectSettings = {
+  max: 10, // the roach
+  perspective: 1000, // in my pantry
+  scale: 1.05, // about to starve to death
+  speed: 500, // because i keep
+  easing: 'cubic-bezier(.03,.98,.52,.99)' // buying adderall instead of food
+};
+
+const spinner = document.getElementById('spinner-container');
 spinner.innerHTML = '<div class="spinner"></div>';
 
 fetch('/assets/JSON/games.json')
-    .then((response) => response.json())
-    .then((data) => {
-        const container = document.getElementById('card-container');
-        for (const game of data) {
-            const card = document.createElement('div');
-            card.classList.add('card');
-            const link = document.createElement('a');
-            const image = document.createElement('img');
-            image.classList.add('cardimage');
-            image.src = game.image;
-            const name = document.createElement('p');
-            name.classList.add('cardname');
-            name.textContent = game.name;
-            link.appendChild(image);
-            link.appendChild(name);
-            card.appendChild(link);
-            container.appendChild(card);
-        }
+  .then((response) => response.json())
+  .then((data) => {
+    const container = document.getElementById('card-container');
+    for (const game of data) {
+      const card = document.createElement('div');
+      card.classList.add('card');
+      const link = document.createElement('a');
+      const image = document.createElement('img');
+      image.classList.add('cardimage');
+      image.src = game.image;
+      const name = document.createElement('p');
+      name.classList.add('cardname');
+      name.textContent = game.name;
+      link.appendChild(image);
+      link.appendChild(name);
+      card.appendChild(link);
+      container.appendChild(card);
 
-        spinner.remove();
-    })
-    .catch((error) => {
-        spinner.remove();
-        console.error(error);
-    });
-  </script>
-  <script>
-    const tiltEffectSettings = {
-  max: 10, // max tilt rotation (degrees (deg))
-  perspective: 1000, // transform perspective, the lower the more extreme the tilt gets (pixels (px))
-  scale: 1.05, // transform scale - 2 = 200%, 1.5 = 150%, etc..
-  speed: 500, // speed (transition-duration) of the enter/exit transition (milliseconds (ms))
-  easing: 'cubic-bezier(.03,.98,.52,.99)' // easing (transition-timing-function) of the enter/exit transition
-};
+      // the roach in my pantry about to starve to death because i keep buying adderall instead of food
+      card.addEventListener('mouseenter', cardMouseEnter);
+      card.addEventListener('mousemove', cardMouseMove);
+      card.addEventListener('mouseleave', cardMouseLeave);
+    }
 
-const cards = document.querySelectorAll('.card');
-
-cards.forEach(card => {
-  card.addEventListener('mouseenter', cardMouseEnter);
-  card.addEventListener('mousemove', cardMouseMove);
-  card.addEventListener('mouseleave', cardMouseLeave);
-});
+    spinner.remove();
+  })
+  .catch((error) => {
+    spinner.remove();
+    console.error(error);
+  });
 
 function cardMouseEnter(event) {
   setTransition(event);
@@ -114,7 +110,8 @@ function setTransition(event) {
     card.style.transition = '';
   }, tiltEffectSettings.speed);
 }
-  </script>
+
+</script>
 </body>
 
 </html>
