@@ -36,3 +36,8 @@ function closeCredits() {
     document.getElementById('credits').style.display = 'none';
   }, 1000);
 }
+
+const cursor = document.querySelector(".cursor");
+document.body.addEventListener("mousemove", ({ clientX, clientY }) => {
+  cursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
+});
